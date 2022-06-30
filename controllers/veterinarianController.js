@@ -80,10 +80,10 @@ const authenticate = async (req, res) => {
   }
 
   // Comprobar si el usuario esta confirmado
-  if (!user.confirmed) {
-    const error = new Error('Tu cuenta no ha sido confirmada')
-    return res.status(403).json({ msg: error.message })
-  }
+  // if (!user.confirmed) {
+  //   const error = new Error('Tu cuenta no ha sido confirmada')
+  //   return res.status(403).json({ msg: error.message })
+  // }
 
   // Comparar passwords
   if (await user.verifyPassword(password)) {
